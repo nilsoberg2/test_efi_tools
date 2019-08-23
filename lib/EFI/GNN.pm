@@ -1,10 +1,4 @@
 
-BEGIN {
-    die "The EFISHARED environment variable must be set before including this module" if not exists $ENV{EFISHARED} and not length $ENV{EFISHARED};
-    use lib $ENV{EFISHARED};
-}
-
-
 package EFI::GNN;
 
 use strict;

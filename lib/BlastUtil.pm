@@ -1,11 +1,9 @@
 
-BEGIN {
-    die "Please load efishared before runing this script" if not $ENV{EFISHARED};
-    use lib $ENV{EFISHARED};
-}
 
 package BlastUtil;
 
+use File::Basename;
+use lib dirname (__FILE__);
 use EFI::Annotations;
 
 use constant INPUT_SEQ_ID => "zINPUTSEQ";
